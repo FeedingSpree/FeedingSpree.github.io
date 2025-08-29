@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, Settings } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,10 +9,10 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2">
               <img src="/JISSA FINAL LOGO.png" alt="JISSA Logo" className="w-10 h-10" />
               <span className="text-xl font-bold text-white">JISSA</span>
-            </Link>
+            </div>
           </div>
           
           <div className="hidden md:block">
@@ -27,13 +26,6 @@ const Navbar: React.FC = () => {
               <a href="#contact" className="text-gray-300 hover:text-jissa-green px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
               </a>
-              <Link 
-                to="/admin" 
-                className="bg-jissa-gray hover:bg-jissa-light-gray text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2"
-              >
-                <Settings className="w-4 h-4" />
-                Admin
-              </Link>
             </div>
           </div>
           
@@ -60,9 +52,6 @@ const Navbar: React.FC = () => {
             <a href="#contact" className="text-gray-300 hover:text-jissa-green block px-3 py-2 rounded-md text-base font-medium">
               Contact
             </a>
-            <Link to="/admin" className="text-gray-300 hover:text-jissa-green block px-3 py-2 rounded-md text-base font-medium">
-              Admin Panel
-            </Link>
           </div>
         </div>
       )}

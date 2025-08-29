@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Award, Users, Calendar, Mail, Phone, MapPin, ChevronRight, Star, Trophy, Medal, Target } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import EventsGallery from '../components/EventsGallery';
 import AwardsSection from '../components/AwardsSection';
-import RegistrationForm from '../components/RegistrationForm';
 
 const HomePage: React.FC = () => {
-  const [showRegistration, setShowRegistration] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-jissa-black via-jissa-dark-gray to-jissa-gray">
@@ -15,7 +12,14 @@ const HomePage: React.FC = () => {
       
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-20 pb-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-jissa-green/20 to-jissa-dark-green/20"></div>
+        <div className="absolute inset-0">
+          <img 
+            src="assets/banner.png" 
+            alt="JISSA Banner" 
+            className="w-full h-full object-cover"
+          /> 
+          <div className="absolute inset-0 bg-jissa-black/70"></div>
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex justify-center mb-8">
@@ -28,29 +32,68 @@ const HomePage: React.FC = () => {
                 JISSA
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-green-100 mb-4 font-medium">
+            <p className="text-xl md:text-2xl text-white mb-4 font-medium drop-shadow-lg">
               Junior Information Systems Security Association
             </p>
-            <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-100 mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
               Empowering the next generation of cybersecurity professionals through hands-on learning, 
               competitive challenges, and industry connections. Join us in securing the digital future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => setShowRegistration(true)}
+                onClick={() => window.open('https://web.facebook.com/jissa.tipqc', '_blank')}
                 className="bg-gradient-to-r from-jissa-green to-jissa-dark-green hover:from-jissa-dark-green hover:to-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
               >
                 Join JISSA Today
                 <ChevronRight className="w-5 h-5" />
               </button>
-              <Link
-                to="#events"
-                className="border-2 border-jissa-green text-jissa-green hover:bg-jissa-green hover:text-jissa-black px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Explore Our Events
-                <Calendar className="w-5 h-5" />
-              </Link>
+              
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Promotional Video Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">See JISSA in Action</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Watch our promotional video to get a glimpse of what makes JISSA an exceptional cybersecurity community
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="relative bg-jissa-dark-gray/50 rounded-2xl overflow-hidden backdrop-blur-sm border border-jissa-light-gray/50 shadow-2xl">
+              <div className="aspect-video bg-jissa-gray/30 flex items-center justify-center">
+               
+                
+                {/* Uncomment and replace with your actual video */}
+                { 
+                <video 
+                  controls 
+                  className="w-full h-full"
+                >
+                  <source src="assets/promo.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                }
+              </div>
+              
+              {/* Video Info Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-jissa-black/80 to-transparent p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-white font-semibold text-lg">JISSA: Securing Tomorrow</h3>
+                    <p className="text-gray-300 text-sm">Learn about our mission, achievements, and community</p>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-300 text-sm">
+                    <span>Duration: 1:59</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </section>
@@ -140,11 +183,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Registration Modal */}
-      {showRegistration && (
-        <RegistrationForm onClose={() => setShowRegistration(false)} />
-      )}
     </div>
   );
 };

@@ -21,7 +21,7 @@ const awards: AwardItem[] = [
     category: "Competition",
     level: "National"
   },
-  {
+   {
     id: 2,
     title: "Outstanding Student Organization",
     description: "Recognized by the university for exceptional leadership, community service, and academic achievement.",
