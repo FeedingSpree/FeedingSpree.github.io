@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
           <div className="text-center">
             <div className="flex justify-center mb-8">
               <div className="p-4 bg-jissa-green/20 rounded-full backdrop-blur-sm border border-jissa-green/30">
-                <img src="/JISSA FINAL LOGO.png" alt="JISSA Logo" className="w-16 h-16" />
+                <img src="public/JISSA FINAL LOGO.png" alt="JISSA Logo" className="w-16 h-16" />
               </div>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
