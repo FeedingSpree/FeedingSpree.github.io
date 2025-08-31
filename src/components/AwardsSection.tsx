@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, Medal, Award, Star, Target, Shield } from 'lucide-react';
+import { Trophy } from 'lucide-react';
 
 interface AwardItem {
   id: number;
@@ -8,69 +8,52 @@ interface AwardItem {
   year: string;
   icon: React.ReactNode;
   category: string;
-  level: 'National' | 'Regional' | 'State' | 'University';
+  level: 'GAWAD T.I.P' | 'GAWAD T.I.P 2025' | 'Regional' | 'State' | 'University';
 }
 
 const awards: AwardItem[] = [
   {
     id: 1,
-    title: "CyberPatriot National Champions",
+    title: "Best Student Organization Program",
     description: "First place in the National CyberPatriot Competition, demonstrating excellence in cybersecurity defense and system administration.",
     year: "2024",
     icon: <Trophy className="w-8 h-8" />,
-    category: "Competition",
-    level: "National"
+    category: "Award",
+    level: "GAWAD T.I.P"
   },
-   {
+  {
     id: 2,
-    title: "Outstanding Student Organization",
-    description: "Recognized by the university for exceptional leadership, community service, and academic achievement.",
-    year: "2023",
-    icon: <Award className="w-8 h-8" />,
-    category: "Leadership",
-    level: "University"
+    title: "Best Student Organization Program",
+    description: "Recognized by the university as the best student organization for exceptional leadership, community service, and academic achievement.",
+    year: "2024",
+    icon: <Trophy className="w-8 h-8" />,
+    category: "Award",
+    level: "GAWAD T.I.P"
   },
   {
     id: 3,
-    title: "Regional CTF Champions",
-    description: "Won the Southeast Regional Capture The Flag competition with innovative problem-solving approaches.",
-    year: "2023",
-    icon: <Medal className="w-8 h-8" />,
-    category: "Competition",
-    level: "Regional"
+    title: "Outstanding Student Organization - SILVER Award",
+    description: "Recognized by the university with the Silver Award for outstanding leadership, service, and contributions to the student community",
+    year: "2024",
+    icon: <Trophy className="w-8 h-8" />,
+    category: "Award",
+    level: "GAWAD T.I.P"
   },
   {
     id: 4,
-    title: "NICE Challenge Winner",
-    description: "First place in the National Initiative for Cybersecurity Education (NICE) Challenge for collegiate teams.",
+    title: "GAWAD T.I.P. 2025 Awardees",
+    description: "4 Officers were awarded during the Prestigious event",
     year: "2024",
-    icon: <Star className="w-8 h-8" />,
-    category: "Challenge",
-    level: "National"
+    icon: <Trophy className="w-8 h-8" />,
+    category: "Leadership",
+    level: "GAWAD T.I.P"
   },
-  {
-    id: 5,
-    title: "Cybersecurity Excellence Award",
-    description: "State-level recognition for promoting cybersecurity awareness and education in academic institutions.",
-    year: "2023",
-    icon: <Shield className="w-8 h-8" />,
-    category: "Education",
-    level: "State"
-  },
-  {
-    id: 6,
-    title: "Innovation in Security Award",
-    description: "Honored for developing innovative security solutions and contributing to open-source security tools.",
-    year: "2024",
-    icon: <Target className="w-8 h-8" />,
-    category: "Innovation",
-    level: "National"
-  }
 ];
 
 const levelColors = {
-  National: 'from-jissa-light-green to-jissa-green',
-  Regional: 'from-jissa-green to-jissa-dark-green',
+  "GAWAD T.I.P": 'from-jissa-light-green to-jissa-green',
+  "GAWAD T.I.P 2025": 'from-jissa-green to-jissa-dark-green',
+  Regional: 'from-green-400 to-green-600',
   State: 'from-green-400 to-green-600',
   University: 'from-pink-400 to-rose-500'
 };
@@ -97,14 +80,13 @@ const AwardsSection: React.FC = () => {
             <div className="flex-1 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
                 <span className="bg-gradient-to-r from-jissa-light-green to-jissa-green text-transparent bg-clip-text font-bold text-sm">
-                  NATIONAL CHAMPIONS
+                  1st RUNNER UP
                 </span>
                 <span className="text-gray-400">2024</span>
               </div>
-              <h3 className="text-3xl font-bold text-white mb-4">CyberPatriot National Champions</h3>
+              <h3 className="text-3xl font-bold text-white mb-4">𝐇𝐚𝐜𝐤𝐅𝐨𝐫𝐆𝐨𝐯 𝟑 by DICT and Philippines National CERT</h3>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Our team achieved the highest honor in cybersecurity education by winning the national CyberPatriot competition, 
-                competing against over 3,000 teams nationwide and demonstrating exceptional skills in network defense and system security.
+
               </p>
             </div>
           </div>
@@ -144,27 +126,6 @@ const AwardsSection: React.FC = () => {
         ))}
       </div>
 
-      {/* Statistics */}
-      <div className="mt-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-jissa-light-green mb-2">12+</div>
-            <div className="text-gray-300 text-sm">Total Awards</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-jissa-green mb-2">3</div>
-            <div className="text-gray-300 text-sm">National Titles</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-jissa-dark-green mb-2">8</div>
-            <div className="text-gray-300 text-sm">Regional Wins</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-orange-400 mb-2">100%</div>
-            <div className="text-gray-300 text-sm">Success Rate</div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

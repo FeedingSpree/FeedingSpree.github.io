@@ -18,17 +18,17 @@ const events: Event[] = [
     date: "Nov 28, 2024",
     description: "💎 Galactic Gambit:Capture the Flag Workshop 💻✨ Step into a universe of adventure and teamwork with Galactic Gambit 🌌, where you will sharpen your cybersecurity skills in a thrilling, hands-on workshop 👾. Inspired by the Crystal Gems resilience and strategy, this event will challenge you to think, solve, and conquer! 🦹‍♂️ \n\n🛡️ What to Expect: \n🔹 Interactive cybersecurity challenges \n 🔹 Team-based flag capturing missions \n 🔹 Immersive Steven Universe-themed activities",
     image: "assets/CTF.jpg",
-    participants: 24,
+    participants: 48,
     category: "Workshop"
   },
   {
     id: 2,
-    title: "Hack the Beat CTF",
+    title: "Hack the Beat CTF Collaboration w/ JISSA APC",
     date: "Feb 15, 2025",
     description: "🎵 Hack the Beat 🎵 Get ready to sync your skills to the rhythm of the most electrifying cybersecurity showdown of the year! Hack the Beat is here, and it’s time to turn up the volume on your hacking prowess. 🎧💻\n\nThis year is all about finding the rhythm to beat the competition. Dive into a symphony of challenges where every note hides a clue, every beat conceals a vulnerability, and every flag is a crescendo waiting to be captured. 🎶🔓\nTeams will face a melody of mind-bending puzzles, testing their cybersecurity expertise, teamwork, and creativity. Will your squad hit the high notes and claim victory, or will another team steal the show? 🏆🎤\nAre you ready to hack the beat, crack the code, and seize the flag? Join us at Hack the Beat and let your skills compose the ultimate victory anthem! 🚀🔥",
     image: "assets/HTB.jpg",
-    participants: 30,
-    category: "Workshop"
+    participants: 48,
+    category: "Competition"
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const events: Event[] = [
     date: "Nov 15, 2024",
     description: "🌠<_𝙾𝚖𝚗𝚒𝚝𝚛𝚒𝚡 𝙳𝚎𝚏𝚎𝚗𝚜𝚎: 𝙲𝚢𝚋𝚎𝚛𝚜𝚎𝚌𝚞𝚛𝚒𝚝𝚢 𝙶𝚎𝚗𝚎𝚛𝚊𝚕 𝙰𝚜𝚜𝚎𝚖𝚋𝚕𝚢 𝙼𝚊𝚒𝚗 𝙿𝚘𝚜𝚝𝚎𝚛_>👽💚\n\nIn the boundless codon stream 🦠 where aliens lie, We rise as one, our skills profound. We stand to protect, to be brave, and resilient 🚀. Agents from all nations, all paths intertwined, for a secured innovation, for protection of multiverses 🌌\n\nJoin us in our mission towards intergalactic security bravery in our annual 𝙹𝙸𝚂𝚂𝙰 𝙶𝚎𝚗𝚎𝚛𝚊𝚕 𝙰𝚜𝚜𝚎𝚖𝚋𝚕𝚢 2024!",
     image: "assets/GeneralAssembly.jpg",
-    participants: 28,
+    participants: 77,
     category: "Assembly"
   },
   {
@@ -54,18 +54,10 @@ const events: Event[] = [
     date: "Apr 22, 2025",
     description: "The digital spell has been cast 🪄 '𝑾𝒊𝒄𝒌𝒆𝒅𝒍𝒚 𝑺𝒆𝒄𝒖𝒓𝒆: 𝑨 𝑱𝒐𝒖𝒓𝒏𝒆𝒚 𝒊𝒏𝒕𝒐 𝑪𝒚𝒃𝒆𝒓𝒔𝒆𝒄𝒖𝒓𝒊𝒕𝒚 & 𝑫𝒂𝒕𝒂 𝑺𝒐𝒓𝒄𝒆𝒓𝒚' is finally here! ⚡💫\n\n Get ready to be enchanted by data and empowered by cybersecurity as JDSAAP and JISSA take you on an epic seminar experience like no other 🛡️📊. So, open your minds, and prepare to level up. This is where knowledge turns into power! 🌐⚔️",
     image: "assets/WS.jpg",
-    participants: 35,
+    participants: 54,
     category: "Seminar"
   },
-  {
-    id: 6,
-    title: "JISSA General Assembly",
-    date: "Nov 15, 2024",
-    description: "Practical session on network monitoring, intrusion detection systems, and incident response procedures.",
-    image: "assets/GeneralAssembly.jpg",
-    participants: 28,
-    category: "Lab"
-  }
+  
 ];
 
 const EventsGallery: React.FC = () => {
