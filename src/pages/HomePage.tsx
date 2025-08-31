@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
           <div className="text-center">
             <div className="flex justify-center mb-8">
               <div className="p-4 bg-jissa-green/20 rounded-full backdrop-blur-sm border border-jissa-green/30">
-                <img src="JISSA FINAL LOGO.png" alt="JISSA Logo" className="w-40 h-40" />
+                <img src="public/JISSA FINAL LOGO.png" alt="JISSA Logo" className="w-40 h-40" />
               </div>
             </div>
             
@@ -73,7 +73,7 @@ const HomePage: React.FC = () => {
 
             {/* Redirect Button */}
             <button
-              onClick={() => window.open('https://www.facebook.com/', '_blank')}
+              onClick={() => window.open('https://www.facebook.com/share/v/1EZ7syyHeV/', '_blank')}
               className="bg-gradient-to-r from-jissa-green to-jissa-dark-green hover:from-jissa-dark-green hover:to-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 mx-auto"
             >
               Watch Full Video

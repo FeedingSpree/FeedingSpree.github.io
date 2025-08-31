@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="flex items-center space-x-2">
-              <img src="/JISSA FINAL LOGO.png" alt="JISSA Logo" className="w-10 h-10" />
+              <img src="public/JISSA FINAL LOGO.png" alt="JISSA Logo" className="w-10 h-10" />
               <span className="text-xl font-bold text-white">JISSA</span>
             </div>
           </div>
